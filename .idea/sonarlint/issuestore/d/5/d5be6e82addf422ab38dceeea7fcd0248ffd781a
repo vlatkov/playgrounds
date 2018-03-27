@@ -1,0 +1,7 @@
+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µ®Åî8‰À”â¡,
+Osquid:S1854"5Remove this useless assignment to local variable "i".(×Åû¾úÿÿÿÿ
+`squid:UselessImportCheck"9Remove this unused import 'com.playgrounds.domen.Region'.(Á½Æ¼üÿÿÿÿ
+@squid:S1481"&Remove this unused "i" local variable.(×Åû¾úÿÿÿÿ
+Gsquid:S1068"2Remove this unused "roleRepository" private field.(Îê¤á
+Isquid:S2201"/The return value of "orElseThrow" must be used.(ŽŸäüÿÿÿÿ

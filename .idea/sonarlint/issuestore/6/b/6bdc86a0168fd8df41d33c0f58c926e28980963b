@@ -1,0 +1,5 @@
+
+Xsquid:UselessImportCheck"1Remove this unused import 'java.util.Collection'.(¹ÉĞšùÿÿÿÿ
+vsquid:UselessImportCheck"ORemove this unused import 'org.springframework.data.repository.CrudRepository'.(Îê¶¬üÿÿÿÿ
+ˆsquid:UselessImportCheck"aRemove this unused import 'org.springframework.data.jpa.repository.config.EnableJpaRepositories'.(²œ˜üÿÿÿÿ
+|squid:UselessImportCheck"URemove this unused import 'org.springframework.transaction.annotation.Transactional'.(ğùçøùÿÿÿÿ
