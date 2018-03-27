@@ -19,6 +19,7 @@ public class PlaygroundDTO {
     }
 
     public Playground getPlayground() {
+        int i = 0;
         return playground;
     }
 
