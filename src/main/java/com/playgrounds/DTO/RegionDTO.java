@@ -1,9 +1,7 @@
 package com.playgrounds.DTO;
 
-import com.playgrounds.domen.Playground;
+
 import com.playgrounds.domen.Region;
-import com.sun.org.apache.regexp.internal.RE;
-import org.apache.maven.lifecycle.internal.LifecycleStarter;
 
 import java.util.List;
 
@@ -29,5 +27,13 @@ public class RegionDTO {
 
     public List<PlaygroundDTO> getPlaygroundsDtos() {
         return playgroundsDtos;
+    }
+
+    public void setRegion(Region region) {
+        this.region = region;
+    }
+
+    public void setPlaygroundsDtos(List<PlaygroundDTO> playgroundsDtos) {
+        this.playgroundsDtos = playgroundsDtos;
     }
 }

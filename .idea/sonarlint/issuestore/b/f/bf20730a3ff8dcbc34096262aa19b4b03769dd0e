@@ -1,0 +1,8 @@
+
+Gsquid:S1948"+Make "relations" transient or serializable.(«´ìç8Ü‘äí§,
+rsquid:S00120"WRename this package name to match the regular expression '^[a-z]+(\.[a-z][a-z0-9]*)*$'.(ÍŠÿÿÿÿÿ
+Dsquid:S1068"(Remove this unused "name" private field.(ëÄÎş8ÙÁàí§,
+usquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Â’³ÿ8ÙÁàí§,
+Isquid:S1068"-Remove this unused "relations" private field.(«´ìç8ÙÁàí§,
+zsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(®Öøşÿÿÿÿ8ÙÁàí§,
+Msquid:S1948",Make "attributes" transient or serializable.(‹·àÔÿÿÿÿÿ8Ü‘äí§,

@@ -1,7 +1,7 @@
 package com.playgrounds.resource;
 
-/**
- * Created by vlatko on 1.1.18..
- */
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
 public class CityRest {
 }

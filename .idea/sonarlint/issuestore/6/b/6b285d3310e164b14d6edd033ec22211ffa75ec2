@@ -1,14 +1,10 @@
 
-osquid:UselessImportCheck"FRemove this unused import 'com.playgrounds.repository.UserRepository'.(˜óâÌ8¹ðùá¡,
+hsquid:UselessImportCheck"ARemove this unused import 'org.springframework.http.HttpHeaders'.(ãŸñ×úÿÿÿÿ
 Xsquid:UselessImportCheck"1Remove this unused import 'java.util.Collection'.(¹ÉÐšùÿÿÿÿ
 Tsquid:UselessImportCheck"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ
+Nsquid:S1068"2Remove this unused "roleRepository" private field.(Îê¤á8…¸˜î§,
+Xsquid:S1172"<Remove this unused method parameter "bCryptPasswordEncoder".(—í‘ì8…¸˜î§,
 †squid:UselessImportCheck"_Remove this unused import 'org.springframework.boot.autoconfigure.security.SecurityProperties'.(š©˜àÿÿÿÿÿ
-ƒsquid:UselessImportCheck"URemove this unused import 'org.springframework.transaction.annotation.Transactional'.(ðùçøùÿÿÿÿ8¹ðùá¡,
-@squid:S1481"&Remove this unused "i" local variable.(ùó›Ìøÿÿÿÿ
 hsquid:UselessImportCheck"GRemove this unused import 'org.omg.PortableInterceptor.USER_EXCEPTION'.(™²…&
+Nsquid:S1068"2Remove this unused "userRepository" private field.(×Š¾8…¸˜î§,
 esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(£ñòòúÿÿÿÿ
-‹squid:UselessImportCheck"]Remove this unused import 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder'.(åÅÚ…ûÿÿÿÿ8¹ðùá¡,
-hsquid:UselessImportCheck"ARemove this unused import 'org.springframework.http.HttpHeaders'.(ãŸñ×úÿÿÿÿ
-osquid:UselessImportCheck"FRemove this unused import 'com.playgrounds.repository.RoleRepository'.(ø¼é¸8¹ðùá¡,
-squid:UselessImportCheck"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8¹ðùá¡,
-wsquid:S2629"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(³èÓ8¼Â§½¤,

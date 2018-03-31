@@ -1,7 +1,9 @@
 package com.playgrounds.resource;
 
-/**
- * Created by vlatko on 6.1.18..
- */
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController(value = "${api.path}")
+@Transactional
 public class RegionRest {
 }

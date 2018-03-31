@@ -1,2 +1,8 @@
 
-Wsquid:S2094"BRemove this empty class, write its code or make it an "interface".(ŞäƒÀ
+Vsquid:S1854":Remove this useless assignment to local variable "region".(†©˜ô8¸¦ë§,
+`squid:S1854"?Remove this useless assignment to local variable "playgrounds".(É”»ùÿÿÿÿ8Â²×ë§,
+Ysquid:UselessImportCheck"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8šÒ÷ê§,
+Qsquid:S1481"0Remove this unused "playgrounds" local variable.(É”»ùÿÿÿÿ8Â²×ë§,
+isquid:S2259"HA "NullPointerException" could be thrown; "genericDTO" is nullable here.(õ·ãÔúÿÿÿÿ8¸ùî§,
+Gsquid:S1481"+Remove this unused "region" local variable.(†©˜ô8¸¦ë§,
+Fsquid:S00108")Either remove or fill this block of code.(”ı¾8¼ãûí§,

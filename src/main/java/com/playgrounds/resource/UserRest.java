@@ -26,7 +26,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping(value = "${api.path}")
 @Transactional
 public class UserRest {
 
@@ -51,7 +51,6 @@ public class UserRest {
     ResponseEntity signUp(@RequestBody User user)
     {
         try {
-            int i = 0;
             // save to database
 
             if (userServices.exists(user) == null)

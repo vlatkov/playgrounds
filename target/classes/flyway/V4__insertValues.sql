@@ -29,3 +29,9 @@ INSERT INTO region(city_id, name, code, flag_url) VALUES (2,"Banovo Brdo",11103,
 INSERT INTO region(city_id, name, code, flag_url) VALUES (2,"Žarkovo",11120, null);
 INSERT INTO region(city_id, name, code, flag_url) VALUES (2,"Blok 45",11150, null);
 INSERT INTO region(city_id, name, code, flag_url) VALUES (3,"Liman",21150, null);
+
+INSERT INTO playground(region_id, name, description, location_lat, location_lng) VALUES (1,"Teren1","Opis 1", 11.1111,12.1111);
+INSERT INTO playground(region_id, name, description, location_lat, location_lng) VALUES (2,"Teren2","Opis 2", 13.1111,14.1111);
+
+INSERT INTO playground_info(playground_id, price, number_players, playground_type) VALUES (1,20,12,"Otvoreni");
+INSERT INTO playground_info(playground_id, price, number_players, playground_type) VALUES (2,25,14,"Zatvoreni");

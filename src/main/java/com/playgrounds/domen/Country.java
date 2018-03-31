@@ -66,13 +66,13 @@ public class Country {
         this.flagUrl = flagUrl;
     }
 
-    public List<City> getCities() {
+  /*  public List<City> getCities() {
         return cities;
     }
 
     public void setCities(List<City> cities) {
         this.cities = cities;
-    }
+    }*/
 
     public Country() {
     }

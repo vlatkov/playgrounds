@@ -1,7 +1,9 @@
 
-gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(µ®Åî8‰À”â¡,
-Osquid:S1854"5Remove this useless assignment to local variable "i".(×Åû¾úÿÿÿÿ
-`squid:UselessImportCheck"9Remove this unused import 'com.playgrounds.domen.Region'.(Á½Æ¼üÿÿÿÿ
 @squid:S1481"&Remove this unused "i" local variable.(×Åû¾úÿÿÿÿ
-Gsquid:S1068"2Remove this unused "roleRepository" private field.(Îê¤á
+_squid:UselessImportCheck"1Remove this unused import 'java.util.Collection'.(¹ÉÐšùÿÿÿÿ8Ð›šî§,
+@squid:S2629"$Invoke method(s) only conditionally.(–²½8Ð›šî§,
 Isquid:S2201"/The return value of "orElseThrow" must be used.(ŽŸäüÿÿÿÿ
+jsquid:UselessImportCheck"<Remove this unused import 'javax.persistence.EntityManager'.(ðàËÒýÿÿÿÿ8Ð›šî§,
+`squid:UselessImportCheck"9Remove this unused import 'com.playgrounds.domen.Region'.(Á½Æ¼üÿÿÿÿ
+Gsquid:S1068"2Remove this unused "roleRepository" private field.(Îê¤á
+Osquid:S1854"5Remove this useless assignment to local variable "i".(×Åû¾úÿÿÿÿ
