@@ -2,6 +2,7 @@ package com.playgrounds.services;
 
 import com.playgrounds.DTO.PlaygroundDTO;
 import com.playgrounds.domen.Playground;
+import com.playgrounds.domen.Region;
 import com.playgrounds.repository.PlaygroundInfoRepository;
 import com.playgrounds.repository.PlaygroundRepository;
 import org.springframework.stereotype.Service;
@@ -34,8 +35,8 @@ public class PlaygroundService {
         playgroundRepository.delete(playground);
     }
 
-    public List<Playground> findAllPlaygroundByRegion(Long regionId){
-            return playgroundRepository.findAllByRegion(regionId);
+    public List<Playground> findAllPlaygroundByRegion(Region region){
+            return playgroundRepository.findAllByRegion(region);
     }
 
 }

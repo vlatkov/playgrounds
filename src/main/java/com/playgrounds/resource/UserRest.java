@@ -35,22 +35,22 @@ public class UserRest {
 
     private UserRepository userRepository;
     private RoleRepository roleRepository;
-
-    @Autowired
     private UserServices userServices;
 
-    public UserRest(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder, RoleRepository roleRepository){
-
+    public UserRest(UserRepository userRepository, BCryptPasswordEncoder bCryptPasswordEncoder, RoleRepository roleRepository, UserServices userServices){
         this.userRepository = userRepository;
-
         this.roleRepository = roleRepository;
+        this.userServices = userServices;
     }
 
 
-    @RequestMapping(value = "signup", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/signup",
+            method = RequestMethod.POST,
+            produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity signUp(@RequestBody User user)
     {
         try {
+            int i = 0;
             // save to database
 
             if (userServices.exists(user) == null)
@@ -75,7 +75,7 @@ public class UserRest {
 
     }
 
-    @RequestMapping(value = "/users/{active}",
+    @RequestMapping(value = "/active-user/{active}",
             method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> findAllUserByActive(@PathVariable boolean active){
@@ -86,4 +86,15 @@ public class UserRest {
         //userRepository.findAllByActive(active);
     }
 
+
+    @RequestMapping(value = "/user/{username}",
+            method = RequestMethod.GET,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public User findAllUser(@PathVariable String username){
+
+        log.debug("CALL user api with USERNAME =  ", username);
+
+        return userServices.findOneByUserName(username);
+        //userRepository.findAllByActive(active);
+    }
 }

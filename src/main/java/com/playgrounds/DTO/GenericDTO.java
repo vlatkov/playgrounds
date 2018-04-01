@@ -18,6 +18,8 @@ public class GenericDTO implements Serializable {
 
     private String name = null;
 
+    public GenericDTO(){}
+
     public GenericDTO(String name) {
 
         notNull(name, "The name of the DTO cannot be null...");

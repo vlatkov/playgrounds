@@ -68,7 +68,7 @@ public class UserServices {
         userRepository.delete(user);
     }
 
-    public User findOne(String userName) {
+    public User findOneByUserName(String userName) {
         return userRepository.findByUserName(userName);
     }
 }

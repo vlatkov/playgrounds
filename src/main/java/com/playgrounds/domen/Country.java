@@ -11,7 +11,7 @@ import java.util.Set;
 
 
 @Entity
-@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+//@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
 @Table(name = "country")
 public class Country {
 
@@ -65,14 +65,6 @@ public class Country {
     public void setFlagUrl(String flagUrl) {
         this.flagUrl = flagUrl;
     }
-
-  /*  public List<City> getCities() {
-        return cities;
-    }
-
-    public void setCities(List<City> cities) {
-        this.cities = cities;
-    }*/
 
     public Country() {
     }

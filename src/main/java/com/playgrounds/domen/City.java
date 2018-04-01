@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "city")
-@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+//@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
 public class City implements Serializable {
 
     @Id
@@ -29,12 +29,11 @@ public class City implements Serializable {
     @Column(name = "flag_url")
     @Size(max = 256)
     private String flagUrl;
-
+/*
     @OneToMany(mappedBy = "city")
     private Set<Region> regions = new HashSet<>();
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "country_id")
+*/
+    @ManyToOne
     private Country country;
 
     public Long getId() {
@@ -43,14 +42,6 @@ public class City implements Serializable {
 
     public void setId(Long id) {
         id = id;
-    }
-
-    public Set<Region> getRegion() {
-        return regions;
-    }
-
-    public void setRegion(Set<Region> region) {
-        this.regions = region;
     }
 
     public String getName() {
@@ -99,7 +90,6 @@ public class City implements Serializable {
     public String toString() {
         return "City{" +
                 "Id=" + id +
-                ", region=" + regions +
                 ", name='" + name + '\'' +
                 ", code='" + code + '\'' +
                 ", flagUrl='" + flagUrl + '\'' +

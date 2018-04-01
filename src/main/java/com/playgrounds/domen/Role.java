@@ -31,14 +31,15 @@ public class Role implements Serializable{
     @Size(max = 256)
     private String descriptionRole;
 
+/*
     @ManyToMany(mappedBy = "authorities")
     private List<User> users;
-
-
-   /* @JsonBackReference
-    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<User> users = new HashSet<User>();
 */
+
+
+ /*   @JsonBackReference
+    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<User> users = new HashSet<User>();*/
 
     public Long getId() {
         return id;
@@ -48,13 +49,13 @@ public class Role implements Serializable{
         this.id = id;
     }
 
-    public void setUsers(List<User> users) {
+ /*   public void setUsers(List<User> users) {
         this.users = users;
     }
 
     public List<User> getUsers() {
         return users;
-    }
+    }*/
 
     public String getNameRole() {
         return nameRole;
@@ -78,7 +79,6 @@ public class Role implements Serializable{
                 "Id=" + id +
                 ", nameRole='" + nameRole + '\'' +
                 ", descriptionRole='" + descriptionRole + '\'' +
-                ", users=" + users +
                 '}';
     }
 

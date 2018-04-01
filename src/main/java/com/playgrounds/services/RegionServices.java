@@ -1,5 +1,6 @@
 package com.playgrounds.services;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.playgrounds.DTO.GenericDTO;
 import com.playgrounds.DTO.PlaygroundDTO;
 import com.playgrounds.DTO.RegionDTO;
@@ -7,47 +8,78 @@ import com.playgrounds.domen.Playground;
 import com.playgrounds.domen.Region;
 import com.playgrounds.repository.PlaygroundRepository;
 import com.playgrounds.repository.RegionRepository;
+import org.hyalinedto.api.DTO;
+import org.hyalinedto.api.Hyaline;
+import org.hyalinedto.exception.HyalineException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.management.Attribute;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class RegionServices {
 
+    @Autowired
     RegionRepository regionRepository;
-    PlaygroundRepository playgroundRepository;
+    @Autowired
     PlaygroundService playgroundService;
+    @Autowired
+    RegionServices regionServices;
 
-    public RegionServices(RegionRepository regionRepository, PlaygroundService playgroundService){
+    private Map<String, Object> attributes = new HashMap<>();
+
+    /*public RegionServices(RegionRepository regionRepository, PlaygroundService playgroundService, RegionServices regionServices){
         this.regionRepository = regionRepository;
         this.playgroundService = playgroundService;
-    }
+        this.regionServices = regionServices;
+    }*/
 
-    public RegionDTO findOne(Long regionId) {
+    /*
+        @Test komentar
+    */
+    public Map<String, Object> findOneMappedRegion(Long regionId) {
 
-        Region region = regionRepository.findOne(regionId);
-        List<Playground> playgrounds = playgroundService.findAllPlaygroundByRegion(regionId);
-
-        GenericDTO genericDTO = null;
         try {
-            Attribute attribute = new Attribute("test",playgroundService.findOne(1L));
-            genericDTO.add("playground",attribute);
-        } catch (Exception e){
 
+            Region region = regionRepository.findOne(regionId);
+            List<Playground> playgrounds = playgroundService.findAllPlaygroundByRegion(region);
+            attributes.put("region",region);
+            attributes.put("playground", playgrounds);
+
+        } catch (Exception e){
+            return new HashMap<String, Object>(){{put("error",e.getMessage());}};
         }
 
-        RegionDTO regionDTO = new RegionDTO();
-        PlaygroundDTO playgroundDTO = new PlaygroundDTO();
-
-        regionDTO.setRegion(regionRepository.findOne(regionId));
-        regionDTO.setPlaygroundsDtos((List<PlaygroundDTO>)playgroundDTO);
-        return regionDTO;
+        return attributes;
     }
 
+    /*
+        @Test komentar
+    */
+    public Object getPlaygroundsFromRegion(Long regionId) throws HyalineException {
+        return Hyaline.dtoFromScratch(new DTO() {
+
+            private Region region = regionServices.findOne(regionId);
+            private List<Playground> playgrounds = playgroundService.findAllPlaygroundByRegion(region);
+
+        });
+    }
+
+    /*
+    @Test komentar
+    */
     public List<Region> allRegion(){
         return regionRepository.findAll();
     }
 
+    /*
+      @Test komentar
+    */
+    public Region findOne(Long Id){
+        return regionRepository.findOne(Id);
+    }
 }

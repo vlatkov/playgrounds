@@ -1,10 +1,9 @@
 package com.playgrounds.domen;
 
-
-
-
 import com.fasterxml.jackson.annotation.*;
 import org.hibernate.validator.constraints.Email;
+import org.springframework.web.servlet.View;
+
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
@@ -13,7 +12,6 @@ import java.util.List;
 
 
 @Entity
-//@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
 @Table(name = "user")
 public class User implements Serializable {
 
@@ -35,6 +33,7 @@ public class User implements Serializable {
     @Size(max = 100)
     private String userName;
 
+    @JsonIgnore
     @Column(nullable = true, name = "password")
     @Size(max = 256)
     private String password;

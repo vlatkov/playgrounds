@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Set;
 
 @Entity
-@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
+//@JsonIdentityInfo(generator=ObjectIdGenerators.PropertyGenerator.class, property="id")
 @Table(name = "region")
 public class Region implements Serializable {
 
@@ -34,9 +34,6 @@ public class Region implements Serializable {
     @Size(max = 256)
     private String code;
 
-
-    @OneToMany(mappedBy = "region", fetch = FetchType.EAGER)
-    private Set<User> users = new HashSet<>();
 
     public Long getId() {
         return id;
@@ -72,14 +69,6 @@ public class Region implements Serializable {
 
     public Region() {
 
-    }
-
-    public Set<User> getUsers() {
-        return users;
-    }
-
-    public void setUsers(Set<User> users) {
-        this.users = users;
     }
 
     @Override
